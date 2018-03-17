@@ -1,0 +1,16 @@
+{
+  "name": "hal-adapter",
+  "version": "1.0.0",
+  "description": "An adapter implementing the HAL hypermedia format to use with the library express-hypermedia",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dane Podzkiewitz",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "express-hypermedia": "../express-hypermedia"
+  }
+}
