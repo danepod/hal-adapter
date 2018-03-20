@@ -1,6 +1,6 @@
-import { Entity as BaseEntity } from 'express-hypermedia';
-import { Link } from './Link';
-import { Provider } from './Provider';
+import { Entity as BaseEntity } from "express-hypermedia";
+import { Link } from "./Link";
+import { Provider } from "./Provider";
 
 export abstract class Resource extends BaseEntity {
     _links?: {
@@ -11,7 +11,7 @@ export abstract class Resource extends BaseEntity {
         [relation: string]: Resource | Resource[]
     };
 
-    constructor(provider: Provider, options?: Object) {
+    constructor(provider: Provider, options?: object) {
         super();
 
         this._links = provider.getLinks(options);

@@ -1,21 +1,21 @@
-import { Provider as BaseProvider } from 'express-hypermedia';
-import { Resource } from './Resource';
-import { Link } from './Link';
+import { Provider as BaseProvider } from "express-hypermedia";
+import { Link } from "./Link";
+import { Resource } from "./Resource";
 
 export abstract class Provider extends BaseProvider {
     abstract entity: Resource;
 
-    constructor(options?: Object, returnEntity: boolean = true) {
+    constructor(options?: object, returnEntity: boolean = true) {
         super();
     }
 
-    getLinks(options?: Object): {
+    getLinks(options?: object): {
         [relation: string]: Link | Link[];
     } | undefined {
         return undefined;
     }
 
-    getEmbedded(options?: Object): {
+    getEmbedded(options?: object): {
         [relation: string]: Resource | Resource[]
     } | undefined {
         return undefined;
