@@ -5,12 +5,18 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "tsc -p ./ --outDir lib/",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "author": "Dane Podzkiewitz",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "express-hypermedia": "../express-hypermedia"
+    "express-hypermedia": "../express-hypermedia",
+    "typescript": "^2.7.2"
+  },
+  "devDependencies": {
+    "tslint": "^5.9.1"
   }
 }
